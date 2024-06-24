@@ -1,0 +1,10 @@
+.upload input[type="file"] {
+    display: block;
+
+  }
+  .flow{
+    overflow-x: "scroll"
+  }
+  .active{
+    background-color: red !important;
+  }

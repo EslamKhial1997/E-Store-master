@@ -1,0 +1,481 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box !important;
+}
+div.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+div > .ball {
+	width: 3vw;
+	height: 3vw;
+	border-radius: 100%;
+	margin: 2vw;
+	background-image: linear-gradient(145deg, rgba(255,255,255,0.5) 0%, rgba(0,0,0,0) 100%);
+	animation: bounce 1.5s 0.5s linear infinite;
+}
+.yellow {
+	background-color: var(--yellow);
+}
+
+.red {
+	background-color: var(--red);
+	animation-delay: 0.1s;
+}
+
+.blue {
+	background-color: var(--blue);
+	animation-delay: 0.2s;
+}
+
+.violet {
+	background-color: var(--violet);
+	animation-delay: 0.3s;
+}
+
+@keyframes bounce {
+	0%, 50%, 100% {
+		transform: scale(1);
+		filter: blur(0px);
+	}
+	25% {
+		transform: scale(0.6);
+		filter: blur(3px);
+	}
+	75% {
+		filter: blur(3px);
+		transform: scale(1.4);
+	}
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(243, 244, 246) !important;
+  
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.nav .active,
+#basic-menu .active li {
+  border-bottom: 2px #1976d2 solid;
+}
+
+.post-card,
+.post-card-Category {
+  background: lightgrey;
+  background-color: rgb(24 27 32);
+  border: 1px solid rgb(84 90 106);
+  border-radius: 20px;
+  color: white;
+  width: 25% !important;
+  padding: 10px 20px;
+}
+
+.avatar {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: blueviolet;
+  background-image: linear-gradient(to top left, blueviolet, rgb(73, 31, 112));
+}
+
+.title {
+  display: block;
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 600;
+  margin-top: 10px;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.35s ease-in;
+}
+
+.title:hover {
+  text-decoration: underline blueviolet;
+}
+
+.datetime {
+  font-size: 12px;
+  color: rgb(168 179 207);
+  margin: 10px 0;
+}
+
+.image-preview {
+  flex: 1;
+  min-height: 150px;
+  width: 100%;
+  border-radius: 20px;
+  background-color: blueviolet;
+  background-image: linear-gradient(to top left, blueviolet, rgb(73, 31, 112));
+  margin-bottom: 4px;
+}
+
+.comment-like {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2px 0;
+}
+
+.comment-like span {
+  cursor: pointer;
+  height: 40px;
+  width: 50px;
+  padding: 0 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  border-radius: 10px;
+  background-color: transparent;
+  transition: all 0.15s ease;
+}
+
+.comment-like span:hover {
+  background-color: rgba(137, 43, 226, 0.096);
+}
+
+.comment-like span svg {
+  fill: rgb(255, 255, 255);
+  margin-right: 2px;
+}
+@media only screen and (max-width: 540px) {
+  .post-card {
+    width: 50% !important;
+  }
+  .post-card-Category {
+    width: 100% !important;
+  }
+}
+
+body {
+  background: #aedaa6;
+  font-family: "Raleway";
+}
+.card {
+  background: white;
+  margin: 15px auto;
+
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  transition: all 0.3s;
+}
+.card:hover {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.product {
+  width: 100%;
+  color: #727272;
+  text-transform: uppercase;
+  padding: 20px;
+  border-bottom: 2px solid #efefef;
+  font-size: 12px;
+}
+svg.heart {
+  height: 24px;
+  width: 24px;
+  float: right;
+  margin-top: -3px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+svg.heart:hover {
+  fill: red;
+}
+svg.arrow {
+  float: left;
+  height: 15px;
+  width: 15px;
+  margin-right: 10px;
+}
+
+.photo {
+  width: 45%;
+  text-align: center;
+  float: left;
+}
+/* img {
+  max-height: 240px;
+} */
+
+.description {
+  float: left;
+  width: 55%;
+}
+h1 {
+  color: #515151;
+  font-weight: 300;
+  padding-top: 15px;
+  margin: 0;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+h2 {
+  color: #515151;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+h4 {
+  margin: 0;
+  color: #727272;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+/* p {
+  font-size: 12px;
+  line-height: 20px;
+  color: #727272;
+  padding: 20px 0;
+  margin: 0;
+} */
+
+.button {
+  outline: 0;
+  border: 0;
+  background: none;
+  border: 1px solid #d9d9d9;
+  padding: 8px 0px;
+  margin-bottom: 30px;
+  color: #515151;
+  text-transform: uppercase;
+  width: 45%;
+  font-family: inherit;
+  margin-right: 5px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+.button:hover {
+  background: darken(white, 2%);
+  border: 1px solid #aedaa6;
+  color: #411dc1;
+  cursor: pointer;
+}
+
+
+
+@media (min-width: 992px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768.98px) {
+  .footer-bottom .copyright,
+  .footer-bottom .template-by {
+    text-align: center;
+  }
+}
+
+.parentSwiper .swiper {
+  width: 100%;
+  /* height: 100%; */
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+body {
+  background: #000;
+  color: #000;
+}
+
+.mySwiper .swiper-slide {
+  opacity: 0.4;
+}
+.mySwiper .swiper-wrapper {
+  justify-content: center;
+  padding-top: 25px;
+}
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+.DashboradList a {
+  text-decoration: none !important;
+}
+.DashboradList .active {
+  color: #1976d2;
+  border-bottom: 2px solid #1976d2;
+  font-weight: bolder !important;
+}
+.DashboradList a {
+  color: black;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.MuiDataGrid-cell,
+.MuiDataGrid-columnHeaderTitleContainer {
+  justify-content: center !important;
+}
+.navbarLeft .active {
+  background-color: #1976d2 !important;
+}
+.navbarLeft .active {
+  background-color: #1976d2 !important;
+  color: white !important;
+}
+
+/* Dashboard Form */
+.section {
+  height: 100vh;
+}
+.background-radial-gradient {
+  background-color: hsl(218, 41%, 15%);
+  background-image: radial-gradient(
+      650px circle at 0% 0%,
+      hsl(218, 41%, 35%) 15%,
+      hsl(218, 41%, 30%) 35%,
+      hsl(218, 41%, 20%) 75%,
+      hsl(218, 41%, 19%) 80%,
+      transparent 100%
+    ),
+    radial-gradient(
+      1250px circle at 100% 100%,
+      hsl(218, 41%, 45%) 15%,
+      hsl(218, 41%, 30%) 35%,
+      hsl(218, 41%, 20%) 75%,
+      hsl(218, 41%, 19%) 80%,
+      transparent 100%
+    );
+}
+
+#radius-shape-1 {
+  height: 220px;
+  width: 220px;
+  top: -60px;
+  left: -130px;
+  background: radial-gradient(#44006b, #ad1fff);
+  overflow: hidden;
+}
+
+#radius-shape-2 {
+  border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+  bottom: -60px;
+  right: -110px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(#44006b, #ad1fff);
+  overflow: hidden;
+}
+
+.bg-glass {
+  backdrop-filter: blur(50px);
+}
+
+.swiper3 {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--swiper-theme-color);
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: var(--swiper-theme-color);
+  fill: none;
+  stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+
+
+
+.SideBarProduct {
+  scrollbar-color: #072541 rgba(255, 255, 255, 0);
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+.SideBar .active{
+  color: #fff;
+  font-weight: bolder;
+  background-color: #e49e12 !important;
+}
+
+
+
+
+
+
